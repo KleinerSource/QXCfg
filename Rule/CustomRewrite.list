@@ -1,7 +1,5 @@
-hostname = *.rr.tv, *.javbus.com, ikuuu.co, mb3admin.com, glados.rocks, *.jd.com, xunyun.us, video.google.com, zhiyou.smzdm.com, user-api.smzdm.com, jdapoweand.com, jdpaspecto.com
+hostname = *.rr.tv, *.javbus.com, ikuuu.co, mb3admin.com, glados.rocks, *.jd.com, xunyun.us, video.google.com, zhiyou.smzdm.com, user-api.smzdm.com, jdapoweand.com, jdpaspecto.com, 115.com, 95516.com
 
-# JDCookie
-#https:\/\/api\.m\.jd\.com\/client\.action.*functionId=signBean url script-request-header https://tool.ksccc.cc:4433/QuantumultX/master/Script/JD_DailyBonus.js
 
 # 人人视频
 ^https:\/\/api\.rr\.tv(\/user\/profile|\/watch\/v4) url script-response-body https://tool.ksccc.cc:4433/QuantumultX/master/Script/rrtv_ks.js
@@ -13,23 +11,9 @@ hostname = *.rr.tv, *.javbus.com, ikuuu.co, mb3admin.com, glados.rocks, *.jd.com
 ^https:\/\/jdapoweand\.com\/api\/v1\/users url script-response-body https://tool.ksccc.cc:4433/QuantumultX/master/Script/javdb.js
 ^https:\/\/jdpaspecto\.com\/api\/v1\/users url script-response-body https://tool.ksccc.cc:4433/QuantumultX/master/Script/javdb.js
 
-# 机场签到Cookie获取
-https:\/\/ikuuu\.co url script-request-header https://raw.githubusercontent.com/evilbutcher/Quantumult_X/master/check_in/glados/checkincookie_env.js
-https:\/\/xunyun\.us url script-request-header https://raw.githubusercontent.com/evilbutcher/Quantumult_X/master/check_in/glados/checkincookie_env.js
+# 115
+^https:\/\/editorapi\.115\.com.* url 302 http://115.com/lx?taskdg=1
+^http:\/\/115\.com\/lx.*$ url script-response-body https://raw.githubusercontent.com/nzw9314/QuantumultX/master/Script/115lx.js
 
-# Emby 客户端破解
-^https:\/\/mb3admin\.com\/admin\/service(\/registration\/validateDevice|\/appstore\/register|\/registration\/validate|\/registration\/getStatus|\/supporter\/retrievekey) url script-echo-response https://tool.ksccc.cc:4433/QuantumultX/master/Script/embyecho.js
-#^https:\/\/mb3admin\.com\/admin\/service(\/registration\/validateDevice|\/appstore\/register|\/registration\/validate|\/registration\/getStatus|\/supporter\/retrievekey) url script-response-body https://tool.ksccc.cc:4433/QuantumultX/master/Script/emby.js
-
-# Glados 获取Cookie
-https:\/\/glados\.rocks\/api\/user\/status url script-request-header https://raw.githubusercontent.com/evilbutcher/Quantumult_X/master/check_in/glados/glados.js
-
-#京东历史比价 (by yichahucha)
-^https?://api\.m\.jd\.com/client\.action\?functionId=(wareBusiness|serverConfig|basicConfig) url script-response-body https://raw.githubusercontent.com/yichahucha/surge/master/jd_price.js
-
-# 什么值得买每日签到
-^https?:\/\/zhiyou\.smzdm\.com\/user$ url script-request-header https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/smzdm/smzdm_checkin.js
-^https?:\/\/user-api\.smzdm\.com\/user_login\/normal$ url script-request-body https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/smzdm/smzdm_checkin.js
-
-
-
+#云闪付签到
+https://youhui.95516.com/newsign/public/app/index.html url script-request-header https://gitee.com/passerby-b/javascript/raw/master/unipay.js
