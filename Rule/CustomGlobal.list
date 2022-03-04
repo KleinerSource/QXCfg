@@ -1,0 +1,11 @@
+# Global.list
+# > Discord
+USER-AGENT,Discord*
+DOMAIN-SUFFIX,discord.com
+DOMAIN-SUFFIX,discord.media
+DOMAIN-SUFFIX,ikuuu.co
+# > rsshub.app
+DOMAIN-SUFFIX,rsshub.app
+DOMAIN,testflight.apple.com
+# > Other
+DOMAIN-SUFFIX,javdb.com
