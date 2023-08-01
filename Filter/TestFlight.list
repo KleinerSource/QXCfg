@@ -5,5 +5,5 @@
 # HOST: 1
 # HOST-KEYWORD: 1
 # TOTAL: 2
-HOST,beta.apple.com,TestFlight
-HOST-KEYWORD,testflight,TestFlight
+HOST,beta.apple.com
+HOST-KEYWORD,testflight
